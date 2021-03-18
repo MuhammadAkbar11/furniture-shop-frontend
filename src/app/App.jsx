@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
 import Home from '@app/containers/Home';
+
+import { CssBaseline } from '@material-ui/core';
 import AppAdmin from './admin/AppAdmin';
 
 /* eslint-disable */
@@ -10,6 +12,7 @@ const App = () => {
 
   return (
     <>
+      <CssBaseline />
       <Switch>
         <Route exact path={match.path}>
           <Home />
