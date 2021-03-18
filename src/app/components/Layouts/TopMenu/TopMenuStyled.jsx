@@ -14,12 +14,12 @@ export const TopMenuStyled = styled(Box)`
   padding-left: 5vw;
   padding-right: 5vw;
   ${({ theme }) => `
-    ${theme.breakpoints.up('md')} {
+    ${theme.breakpoints.up('xs')} {
       padding-left: 7.5vw;
       padding-right: 7.5vw;
     }
 
-    ${theme.breakpoints.down('md')} {
+    ${theme.breakpoints.down('xs')} {
       height: 80px;
     }
   `}
@@ -59,7 +59,7 @@ export const AuthLink = styled.span`
     color: ${theme.palette.grey[900]};
 
     .link:hover & {
-      color: ${darken(theme.palette.grey[900], 2)};
+      color: ${darken(theme.palette.grey[900], 0.2)};
       text-decoration: underline;
     }
   `}

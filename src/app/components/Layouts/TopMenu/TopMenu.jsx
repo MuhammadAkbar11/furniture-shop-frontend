@@ -16,7 +16,7 @@ const TopMenu = () => {
 
   return (
     <TopMenuStyled>
-      <Hidden mdDown>
+      <Hidden xsDown>
         <TopMenuHeaderStyled>
           <Box>
             <AuthLink theme={theme}>Facebook</AuthLink>
