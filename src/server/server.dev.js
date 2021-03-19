@@ -33,6 +33,6 @@ app.get('*', (req, res, next) => {
 
 const port = process.env.PORT || 9000;
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log('listening on ' + port);
 });
