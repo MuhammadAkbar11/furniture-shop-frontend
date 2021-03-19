@@ -120,12 +120,14 @@ export const ProductPrice = styled(Typography)`
 
 export const BannerButton = styled(Button)`
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   border-radius: 0;
   font-size: 14px !important;
   margin-top: 1.2rem;
 
   ${({ theme }) => `
     background-color: ${theme.palette.grey[200]};
+    color: ${theme.palette.primary.main};
     padding-top: ${theme.spacing(1)}px;
     padding-bottom: ${theme.spacing(1)}px;
     padding-left: ${theme.spacing(3)}px;
