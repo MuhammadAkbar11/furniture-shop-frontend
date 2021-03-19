@@ -1,3 +1,5 @@
-export const toggleMenuMobile = state => {
+const toggleMenuMobile = state => {
   return { ...state };
 };
+
+export { toggleMenuMobile };
