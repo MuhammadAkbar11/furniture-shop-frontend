@@ -2,8 +2,11 @@ import React from 'react';
 
 import { Box, Hidden, useTheme } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+
+import ProfileIcon from '@components/UI/Icons/ProfileIcon';
 import {
   AuthLink,
+  BoxTopMenuMobile,
   LogoTitle,
   TopMenuFooter,
   TopMenuHeaderStyled,
@@ -16,6 +19,21 @@ const TopMenu = () => {
 
   return (
     <TopMenuStyled>
+      <Hidden smUp>
+        <BoxTopMenuMobile>
+          <LogoTitle>FUDU</LogoTitle>
+          <Box
+            style={{
+              cursor: 'pointer',
+            }}
+            width={40}
+            height={40}
+          >
+            <ProfileIcon />
+          </Box>
+        </BoxTopMenuMobile>
+      </Hidden>
+
       <Hidden xsDown>
         <TopMenuHeaderStyled>
           <Box>
@@ -42,7 +60,7 @@ const TopMenu = () => {
         <TopMenuFooter>
           <TopMenuItems />
           <Box my={0} flex={1}>
-            <LogoTitle color={theme.palette}>FUDU</LogoTitle>
+            <LogoTitle>FUDU</LogoTitle>
           </Box>
           <div />
         </TopMenuFooter>

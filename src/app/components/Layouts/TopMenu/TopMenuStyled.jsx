@@ -1,4 +1,4 @@
-import { Box, darken } from '@material-ui/core';
+import { Box, darken, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const TopMenuStyled = styled(Box)`
@@ -14,12 +14,13 @@ export const TopMenuStyled = styled(Box)`
   padding-left: 5vw;
   padding-right: 5vw;
   ${({ theme }) => `
-    ${theme.breakpoints.up('xs')} {
+    ${theme.breakpoints.up('md')} {
       padding-left: 7.5vw;
       padding-right: 7.5vw;
     }
 
     ${theme.breakpoints.down('xs')} {
+      background-color: ${theme.palette.primary.main};
       height: 80px;
     }
   `}
@@ -76,11 +77,29 @@ export const TopMenuFooter = styled.div`
   align-content: center;
 `;
 
-export const LogoTitle = styled.h1`
+export const BoxTopMenuMobile = styled(Box)`
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ${({ theme }) => `
+    color: ${theme.palette.grey[200]};
+    margin-top: ${theme.spacing(2)}px;
+  `}
+`;
+
+export const LogoTitle = styled(Typography)`
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+
   font-weight: bold;
-  ${({ color }) => `
-  color: ${color.primary.main};
+  ${({ theme }) => `
+    color: ${theme.palette.grey[200]};
+    font-size: 30px;
+    ${theme.breakpoints.up('sm')}{
+      font-size: 50px;
+      color: ${theme.palette.primary.main};
+    }
+
   `}
 `;
