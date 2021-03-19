@@ -7,8 +7,9 @@ import {
   BannerGridItem,
   BannerProductDesc,
   BannerProductTitle,
+  BoxProductImage,
   Caption,
-  ImageBanner,
+  ProductImg,
   ProductPrice,
 } from './BannerStyled';
 import imgBanner from '../../../../assets/img/sofa-hijau.png';
@@ -51,20 +52,9 @@ const Banner = () => {
         </Box>
         <Box clone order={{ xs: 1, sm: 1, lg: 2 }} display='flex'>
           <BannerGridItem item md={8}>
-            <Box
-              width='80%'
-              height='100%'
-              ml={{
-                sm: 'auto',
-                md: 'auto',
-                lg: 'auto',
-              }}
-              my='auto'
-              display='flex'
-              alignItems='center'
-            >
-              <ImageBanner src={imgBanner} alt='' />
-            </Box>
+            <BoxProductImage>
+              <ProductImg src={imgBanner} />
+            </BoxProductImage>
           </BannerGridItem>
         </Box>
       </BannerGridContainer>

@@ -14,6 +14,7 @@ export const BannerContainer = styled(Box)`
       color: ${theme.palette.light};
     }
     ${theme.breakpoints.down('sm')} {
+      padding-bottom: ${theme.spacing(10)}px;
       min-height: 100vh;
       height: max-content;
     }
@@ -26,7 +27,7 @@ export const BannerGridContainer = styled(Grid)`
   ${({ theme }) => `
     ${theme.breakpoints.down('sm')} {
       min-height: 'auto';
-      border: '1px solid red';
+
       margin-left: 'auto';
       margin-right: 'auto';
     }
@@ -37,7 +38,25 @@ export const BannerGridItem = styled(Grid)`
   height: 100%;
 `;
 
-export const ImageBanner = styled.img`
+export const BoxProductImage = styled(Box)`
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  ${({ theme }) => `
+    margin-bottom: ${theme.spacing(2)}px;
+    ${theme.breakpoints.up('md')} {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right:  0px;
+    }
+  `}
+`;
+
+export const ProductImg = styled.img`
   width: 100%;
 `;
 
@@ -57,7 +76,7 @@ export const Caption = styled.div`
     }
     & .divider {
       border: 0;
-      border-top: 1px solid ${theme.palette.grey[200]};
+      border-top : 1px solid;
       margin-right: ${theme.spacing(1)}px;
       width: 50px;
     }
@@ -71,7 +90,10 @@ export const BannerProductTitle = styled(Typography)`
   font-weight: 500;
   line-height: 5rem;
   ${({ theme }) => `
-  color: ${theme.palette.grey[200]}
+  color: ${theme.palette.grey[200]};
+  ${theme.breakpoints.down('sm')}{
+    font-size: 51px;
+  }
   `}
 `;
 
