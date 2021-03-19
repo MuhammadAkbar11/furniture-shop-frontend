@@ -12,7 +12,7 @@ import {
   ProductImg,
   ProductPrice,
 } from './BannerStyled';
-import imgBanner from '../../../../assets/img/sofa-hijau2.png';
+import imgBanner from '../../../../assets/img/sofa-hijau.png';
 
 const Banner = () => {
   const theme = useTheme();
