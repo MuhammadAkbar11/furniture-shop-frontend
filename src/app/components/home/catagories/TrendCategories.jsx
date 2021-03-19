@@ -7,23 +7,19 @@ import tableImg from 'assets/img/categories/table.png';
 import { Link } from 'react-router-dom';
 import {
   TrendCategStyled,
-  BoxTrendTitle,
   TrendCategoriesContent,
   CategoryItem,
   CategoryImg,
   CategoryItemBadge,
   CategoryItemMedia,
 } from './TrendCategories.styled';
+import SectionTitle from '../sectionTitle/SectionTitle';
 
 const TrendCategories = () => {
   const theme = useTheme();
   return (
     <TrendCategStyled my={0}>
-      <BoxTrendTitle>
-        <Typography align='center' variant='h6' className='title'>
-          Trending Categories
-        </Typography>
-      </BoxTrendTitle>
+      <SectionTitle text='Trending Categories' />
       <TrendCategoriesContent container spacing={2}>
         <CategoryItem item sm={6} md={3}>
           <CategoryItemMedia>
