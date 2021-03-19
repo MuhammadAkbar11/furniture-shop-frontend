@@ -15,7 +15,8 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['@', path.join(__dirname, 'src')],
+          ['assets', path.join(__dirname, 'src/assets')],
+          [('@', path.join(__dirname, 'src'))],
           ['@app', path.join(__dirname, 'src/app')],
           ['@containers', path.join(__dirname, 'src/app/containers')],
           ['@components', path.join(__dirname, 'src/app/components')],
