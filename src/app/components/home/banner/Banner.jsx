@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, useTheme } from '@material-ui/core';
+import imgBanner from 'assets/img/sofa-hijau.png';
 import {
   BannerButton,
   BannerContainer,
@@ -12,7 +13,6 @@ import {
   ProductImg,
   ProductPrice,
 } from './BannerStyled';
-import imgBanner from '../../../../assets/img/sofa-hijau.png';
 
 const Banner = () => {
   const theme = useTheme();
