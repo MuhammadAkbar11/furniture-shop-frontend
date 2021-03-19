@@ -22,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: ['.css', '.js', '.jsx', '.json'],
     alias: {
-      assets: path.resolve(__dirname, 'src/assets'),
+      assets: path.resolve(__dirname, '..', 'src/assets'),
       '@': path.resolve(__dirname, '..', 'src'),
       '@app': path.resolve(__dirname, '..', 'src/app'),
       '@containers': path.resolve(__dirname, '..', 'src/app/containers'),
