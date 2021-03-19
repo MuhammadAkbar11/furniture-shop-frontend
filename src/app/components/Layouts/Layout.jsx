@@ -48,6 +48,9 @@ const theme = createMuiTheme({
       main: '#ef4444',
     },
   },
+  typography: {
+    fontFamily: ['Roboto', 'sans-serif'].join(','),
+  },
 });
 
 const Layout = props => {
