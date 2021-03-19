@@ -3,6 +3,7 @@ import * as UIReducerHandler from './handlers/ui';
 
 const initState = {
   showMobileMenu: false,
+
   menu: [
     {
       url: '/',
@@ -33,3 +34,5 @@ const UIReducer = (state = initState, action) => {
       return state;
   }
 };
+/* eslint-disable import/prefer-default-export */
+export default UIReducer;
