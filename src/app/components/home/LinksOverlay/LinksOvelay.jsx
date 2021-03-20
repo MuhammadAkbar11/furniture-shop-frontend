@@ -24,12 +24,12 @@ const LinksOverlay = () => {
             boxheight={'100%'}
             style={{ backgroundImage: `url(${img})` }}
           >
-            <Typography variant='h4' className='title'>
+            <Typography variant='h5' className='title'>
               Best Chairs
             </Typography>
             <Link className='action'>
               {' '}
-              <ButtonLink type='outlined'>show now</ButtonLink>
+              <ButtonLink variant='outlined'>show now</ButtonLink>
             </Link>
           </LinkBox>
         </LinkGridItem>
@@ -39,13 +39,29 @@ const LinksOverlay = () => {
               <LinkBox
                 boxheight={'100%'}
                 style={{ backgroundImage: `url(${img2})` }}
-              ></LinkBox>
+              >
+                <Typography variant='h5' className='title'>
+                  For Kitchen
+                </Typography>
+                <Link className='action'>
+                  {' '}
+                  <ButtonLink variant='outlined'>show now</ButtonLink>
+                </Link>
+              </LinkBox>
             </LinkGridItem>
             <LinkGridItem height={400} item xs={12} sm={12}>
               <LinkBox
                 boxheight={'100%'}
                 style={{ backgroundImage: `url(${img3})` }}
-              ></LinkBox>
+              >
+                <Typography variant='h5' className='title'>
+                  Bedroom
+                </Typography>
+                <Link className='action'>
+                  {' '}
+                  <ButtonLink variant='outlined'>show now</ButtonLink>
+                </Link>
+              </LinkBox>
             </LinkGridItem>
           </>
         ) : (
@@ -54,12 +70,12 @@ const LinksOverlay = () => {
               boxheight={'50%'}
               style={{ backgroundImage: `url(${img2})` }}
             >
-              <Typography variant='h4' className='title'>
+              <Typography variant='h5' className='title'>
                 For Kitchen
               </Typography>
               <Link className='action'>
                 {' '}
-                <ButtonLink type='outlined'>show now</ButtonLink>
+                <ButtonLink variant='outlined'>show now</ButtonLink>
               </Link>
             </LinkBox>
 
@@ -67,12 +83,12 @@ const LinksOverlay = () => {
               boxheight={'50%'}
               style={{ backgroundImage: `url(${img3})` }}
             >
-              <Typography variant='h4' className='title'>
+              <Typography variant='h5' className='title'>
                 Bedroom
               </Typography>
               <Link className='action'>
                 {' '}
-                <ButtonLink type='outlined'>show now</ButtonLink>
+                <ButtonLink variant='outlined'>show now</ButtonLink>
               </Link>
             </LinkBox>
           </LinkGridItem>

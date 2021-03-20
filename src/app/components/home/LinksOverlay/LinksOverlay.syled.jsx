@@ -51,8 +51,8 @@ export const ButtonLink = styled(Button)`
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   border-radius: 0;
-  font-size: 18px !important;
-  margin-top: 1.5rem;
+  font-size: 15px !important;
+  margin-top: 1.2rem;
 
   ${({ theme }) => `
     border: 1px solid ${theme.palette.grey[400]};
@@ -60,7 +60,7 @@ export const ButtonLink = styled(Button)`
     color: ${theme.palette.grey[400]};
     padding-top: ${theme.spacing(1)}px;
     padding-bottom: ${theme.spacing(1)}px;
-    padding-left: ${theme.spacing(4)}px;
-    padding-right: ${theme.spacing(4)}px;
+    padding-left: ${theme.spacing(2)}px;
+    padding-right: ${theme.spacing(2)}px;
   `}
 `;
