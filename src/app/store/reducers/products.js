@@ -33,7 +33,7 @@ const initState = {
 };
 
 const ProductReducer = (state = initState, action) => {
-  switch (key) {
+  switch (action.type) {
     case productActionTypes.LOAD_RECENT_PRODUCTS:
       return productReducerHandlers.loadRecentProducts;
     default:
