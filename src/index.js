@@ -6,9 +6,11 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import App from './app/App';
 import UIReducer from './app/store/reducers/ui';
+import ProductReducer from './app/store/reducers/products';
 
 const rootReducer = combineReducers({
   ui: UIReducer,
+  product: ProductReducer,
 });
 
 /* eslint-disable */
