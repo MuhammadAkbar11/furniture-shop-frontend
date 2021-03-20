@@ -1,8 +1,9 @@
 import React from 'react';
 
-import img from 'assets/img/chair2.png';
+import imageProduct from 'assets/img/products/1.png';
 import { Box, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import SectionTitle from '../sectionTitle/SectionTitle';
 import {
   BoxRecentProducts,
@@ -15,21 +16,15 @@ import {
 } from './RecentProduct.styled';
 
 const RecentProduct = () => {
-  // let content = null;
   /* eslint-disable */
-  const arr = [];
-  for (let index = 1; index < 12; index++) {
-    // const element = array[index];
-    arr.push({
-      id: index,
-      title: 'Product ' + index,
-      price: 'Rp. 400.000',
-    });
-  }
 
-  let content = arr.map(item => {
+  const recentProducts = useSelector(state => state.product.recentProducts);
+
+  console.log(recentProducts);
+
+  let content = recentProducts.map(item => {
     return (
-      <RecentProductItem item xs={12} sm={6} md={3} key={item.id}>
+      <RecentProductItem item xs={12} sm={6} md={3} key={item._id}>
         <ProductCard>
           <Box className='card-media-box'>
             {' '}
@@ -39,7 +34,7 @@ const RecentProduct = () => {
                 textDecoration: 'none',
               }}
             >
-              <ProductCardMedia image={img} />
+              <ProductCardMedia image={imageProduct} />
             </Link>
           </Box>
           <ProductCardContent className='card-content'>
