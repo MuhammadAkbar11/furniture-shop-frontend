@@ -4,5 +4,5 @@ export const uiActionTypes = {
 };
 
 export const productActionTypes = {
-  LOAD_RECENT_PRODUCTS = 'LOAD_RECENT_PRODUCTS',
-}
+  LOAD_RECENT_PRODUCTS: 'LOAD_RECENT_PRODUCTS',
+};
