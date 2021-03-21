@@ -13,6 +13,7 @@ import {
   TopMenuStyled,
 } from './TopMenuStyled';
 import TopMenuItems from './TopMenuItems';
+import TopMenuUserItems from './TopMenuUserItems';
 
 const TopMenu = () => {
   const theme = useTheme();
@@ -62,7 +63,7 @@ const TopMenu = () => {
           <Box my={0} flex={1}>
             <LogoTitle>FUDU</LogoTitle>
           </Box>
-          <div />
+          <TopMenuUserItems />
         </TopMenuFooter>
       </Hidden>
     </TopMenuStyled>
