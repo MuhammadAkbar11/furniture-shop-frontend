@@ -10,6 +10,7 @@ import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import TopMenu from './TopMenu/TopMenu';
 import { Wrapper } from './LayoutStyled';
+import Footer from './Footer/Footer';
 
 const defaultProps = {
   children: null,
@@ -61,6 +62,7 @@ const Layout = props => {
         <Wrapper>
           <TopMenu />
           {children}
+          <Footer />
         </Wrapper>
       </ThemeProvider>
     </MuiThemeProvider>
