@@ -22,6 +22,12 @@ export const RecentProductsContent = styled(Grid)`
 
 export const RecentProductItem = styled(Grid)`
   height: 475px;
+
+  ${({ theme }) => `
+    ${theme.breakpoints.only('xs')} {
+      height: 375px;
+    }
+  `}
 `;
 
 export const ProductCard = styled(Card)`
@@ -44,6 +50,12 @@ export const ProductCard = styled(Card)`
       }
     }
   }
+
+  ${({ theme }) => `
+    ${theme.breakpoints.only('xs')} {
+      height: 280px;
+    }
+  `}
 `;
 export const ProductCardMedia = styled(CardMedia)`
   background-size: 80%;
@@ -53,6 +65,12 @@ export const ProductCardMedia = styled(CardMedia)`
     position: relative;
     width: 100%;
     height: 245px;
+
+    ${({ theme }) => `
+    ${theme.breakpoints.only('xs')} {
+      height: 145px;
+    }
+  `}
   }
 `;
 
@@ -85,6 +103,18 @@ export const ProductCardContent = styled(CardContent)`
     font-size: 14px;
     font-weight: 400;
   }
+
+  ${({ theme }) => `
+    ${theme.breakpoints.only('xs')} {
+      .price {
+        font-size: 12px;
+      }
+
+      a .title {
+        font-size: 12px;
+      }
+    }
+  `}
 `;
 
 export const ProductCardAction = styled(Box)`
@@ -117,5 +147,11 @@ export const ProductCardAction = styled(Box)`
         background-color: ${({ theme }) => theme.palette.primary.main};
       }
     }
+
+    ${({ theme }) => `
+    ${theme.breakpoints.only('xs')} {
+      font-size: 10px;
+    }
+  `}
   }
 `;

@@ -24,7 +24,7 @@ const RecentProduct = () => {
 
   let content = recentProducts.map(item => {
     return (
-      <RecentProductItem item xs={12} sm={6} md={3} key={item._id}>
+      <RecentProductItem item xs={6} sm={6} md={3} key={item._id}>
         <ProductCard>
           <Box className='card-media-box'>
             {' '}
