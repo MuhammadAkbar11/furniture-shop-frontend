@@ -32,7 +32,7 @@ const TopMenuUserItems = () => {
       <Link className='link' to='/cart'>
         <SearchIcon />
       </Link>
-      <Link className='link' to='/cart'>
+      <Link className='link' to='/auth/login'>
         <UserIcon />
       </Link>
       <Link className='link' to='/cart'>
