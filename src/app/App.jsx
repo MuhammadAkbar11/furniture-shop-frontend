@@ -5,6 +5,7 @@ import Home from '@app/containers/Home';
 
 import { CssBaseline } from '@material-ui/core';
 import AppAdmin from './admin/AppAdmin';
+import Cart from './containers/Cart';
 
 /* eslint-disable */
 const App = () => {
@@ -16,6 +17,9 @@ const App = () => {
       <Switch>
         <Route exact path={match.path}>
           <Home />
+        </Route>
+        <Route path={`${match.path}cart`}>
+          <Cart />
         </Route>
         <Route path={`${match.path}admin`}>
           <AppAdmin />
