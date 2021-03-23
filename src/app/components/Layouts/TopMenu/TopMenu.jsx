@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Hidden, useTheme } from '@material-ui/core';
+import { Box, Hidden, useTheme, Link as MuiLink } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import ProfileIcon from '@components/UI/Icons/ProfileIcon';
@@ -23,14 +23,16 @@ const TopMenu = () => {
       <Hidden smUp>
         <BoxTopMenuMobile>
           <LogoTitle>FUDU</LogoTitle>
-          <Box
-            style={{
-              cursor: 'pointer',
-            }}
-            width={40}
-            height={40}
-          >
-            <ProfileIcon />
+          <Box width={40} height={40}>
+            <MuiLink
+              style={{
+                textDecoration: 'none',
+              }}
+              component={Link}
+              to='/auth/login'
+            >
+              <ProfileIcon />
+            </MuiLink>
           </Box>
         </BoxTopMenuMobile>
       </Hidden>
