@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Box,
-  Button as MuiButton,
   Table,
   TableBody,
   TableCell,
@@ -13,13 +12,14 @@ import {
   Divider,
   withStyles,
 } from '@material-ui/core';
+import Button from '@components/UI/Button/Button';
+import CounterQty from '@components/UI/CounterQty/CounterQty';
 import {
   CartDetailCard,
   CartProductsContainer,
   CartProductsGridContainer,
   CartTableBox,
 } from './CartProduct.styled';
-import Button from '../../UI/Button/Button';
 
 const StyledTableRow = withStyles(() => ({
   root: {
@@ -59,8 +59,7 @@ const CartProducts = () => {
                       <TableCell>{row.price}</TableCell>
                       <TableCell>
                         <Box>
-                          <MuiButton>+</MuiButton>
-                          <MuiButton>-</MuiButton>
+                          <CounterQty />
                         </Box>
                       </TableCell>
                       <TableCell>Rp. 200.000</TableCell>
