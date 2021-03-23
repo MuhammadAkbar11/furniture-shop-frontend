@@ -83,9 +83,12 @@ export const BoxTopMenuMobile = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   ${({ theme }) => `
-    color: ${theme.palette.grey[200]};
-    margin-top: ${theme.spacing(2)}px;
+    a {
+        color: ${theme.palette.grey[200]};
+        margin-top: ${theme.spacing(2)}px;
+    }
   `}
 `;
 
