@@ -8,6 +8,7 @@ import AppAdmin from './admin/AppAdmin';
 import Cart from './containers/Cart';
 import Login from './containers/auth/Login';
 import SignUp from './containers/auth/SignUp';
+import DetailProduct from './containers/detailProduct/DetailProduct';
 
 /* eslint-disable */
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
       <Switch>
         <Route exact path={match.path}>
           <Home />
+        </Route>
+        <Route exact path={`${match.path}product`}>
+          <DetailProduct />
         </Route>
         <Route path={`${match.path}cart`}>
           <Cart />
