@@ -75,9 +75,3 @@ export const CartDetailCard = styled(Card)`
     }
   `}
 `;
-
-export const ButtonCheckout = styled(Button)`
-  border: none;
-  box-shadow: none !important;
-  border-radius: 0px;
-`;

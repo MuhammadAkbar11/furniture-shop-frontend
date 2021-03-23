@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Box,
-  Button,
+  Button as MuiButton,
   Table,
   TableBody,
   TableCell,
@@ -14,12 +14,12 @@ import {
   withStyles,
 } from '@material-ui/core';
 import {
-  ButtonCheckout,
   CartDetailCard,
   CartProductsContainer,
   CartProductsGridContainer,
   CartTableBox,
 } from './CartProduct.styled';
+import Button from '../../UI/Button/Button';
 
 const StyledTableRow = withStyles(() => ({
   root: {
@@ -59,8 +59,8 @@ const CartProducts = () => {
                       <TableCell>{row.price}</TableCell>
                       <TableCell>
                         <Box>
-                          <Button>+</Button>
-                          <Button>-</Button>
+                          <MuiButton>+</MuiButton>
+                          <MuiButton>-</MuiButton>
                         </Box>
                       </TableCell>
                       <TableCell>Rp. 200.000</TableCell>
@@ -91,9 +91,9 @@ const CartProducts = () => {
                 <Typography className='card-row-value'>Subtotal</Typography>
               </Box>
               <Box mt={4}>
-                <ButtonCheckout fullWidth color='primary' variant='contained'>
+                <Button fullWidth color='primary' variant='contained'>
                   Checkout
-                </ButtonCheckout>
+                </Button>
               </Box>
             </CardContent>
           </CartDetailCard>
