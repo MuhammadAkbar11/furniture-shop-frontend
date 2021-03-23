@@ -38,7 +38,7 @@ const BreadCrumbs = props => {
         <Typography className='title'>{title}</Typography>
       </BreadcrumbsTitle>
       <BreadcrumbsNav>
-        <Breadcrumbs aria-label='breadcrumb'>
+        <Breadcrumbs separator='>' aria-label='breadcrumb'>
           {items.map((item, index) => {
             const key = index;
 

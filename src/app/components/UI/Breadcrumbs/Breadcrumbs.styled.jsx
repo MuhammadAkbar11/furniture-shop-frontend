@@ -15,6 +15,12 @@ export const BreadcrumbsContainer = styled(Box)`
   ${({ theme }) => `
     background-color: ${theme.palette.primary.main};
     color: ${theme.palette.grey[200]};
+    ${theme.breakpoints.down('sm')} {
+      flex-direction: column;
+      padding-bottom: 2rem;
+      padding-top: 1rem;
+      align-items: flex-start;
+    }
     ${theme.breakpoints.up('md')} {
 
       padding-left: 7.5vw;

@@ -20,8 +20,6 @@ const RecentProduct = () => {
 
   const recentProducts = useSelector(state => state.product.recentProducts);
 
-  console.log(recentProducts);
-
   let content = recentProducts.map(item => {
     return (
       <RecentProductItem item xs={6} sm={6} md={3} key={item._id}>
