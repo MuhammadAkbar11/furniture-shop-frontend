@@ -7,6 +7,7 @@ import { CssBaseline } from '@material-ui/core';
 import AppAdmin from './admin/AppAdmin';
 import Cart from './containers/Cart';
 import Login from './containers/auth/Login';
+import SignUp from './containers/auth/SignUp';
 
 /* eslint-disable */
 const App = () => {
@@ -24,6 +25,9 @@ const App = () => {
         </Route>
         <Route path={`${match.path}auth/login`}>
           <Login />
+        </Route>
+        <Route path={`${match.path}auth/signup`}>
+          <SignUp />
         </Route>
         <Route path={`${match.path}admin`}>
           <AppAdmin />
