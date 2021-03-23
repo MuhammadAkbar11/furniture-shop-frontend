@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const BreadcrumbsContainer = styled(Box)`
   position: relative;
   width: 100%;
-  height: 90px;
+  height: 70px;
   padding-left: 5vw;
   padding-right: 5vw;
   display: flex;
@@ -34,6 +34,7 @@ export const BreadcrumbsTitle = styled(Box)`
     .title {
       font-weight: 400;
       font-size: 16px;
+      text-transform: capitalize;
     }
 
     ${theme.breakpoints.up('md')} {
@@ -60,7 +61,7 @@ export const BreadcrumbsNav = styled(Box)`
       }
       .link {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         color: ${theme.palette.slate};
 
         &:hover{
@@ -74,7 +75,7 @@ export const BreadcrumbsNav = styled(Box)`
     ${theme.breakpoints.up('md')} {
         flex: 1;
         .link {
-          font-size: 18px;
+          font-size: 14px;
         }
       }
   `}
