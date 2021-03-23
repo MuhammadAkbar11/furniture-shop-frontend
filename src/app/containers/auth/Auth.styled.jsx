@@ -1,9 +1,9 @@
 import { Box, Card, Grid, InputBase, InputLabel } from '@material-ui/core';
 import styled from 'styled-components';
 
-export const LoginContainer = styled(Box)`
+export const AuthContainer = styled(Box)`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding-left: 5vw;
   padding-right: 5vw;
   display: flex;
@@ -20,7 +20,7 @@ export const LoginContainer = styled(Box)`
   `}
 `;
 
-export const LoginContent = styled(Grid)`
+export const AuthContent = styled(Grid)`
   width: 100%;
   height: 100%;
   .title {
@@ -28,7 +28,7 @@ export const LoginContent = styled(Grid)`
   }
 `;
 
-export const LoginCard = styled(Card)`
+export const AuthCard = styled(Card)`
   width: 100%;
   border-radius: 0px;
   box-shadow: none;

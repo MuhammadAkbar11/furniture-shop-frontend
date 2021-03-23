@@ -13,10 +13,10 @@ import {
   FormBox,
   FormInputField,
   FormInputLabel,
-  LoginCard,
-  LoginContainer,
-  LoginContent,
-} from './Login.styled';
+  AuthCard,
+  AuthContainer,
+  AuthContent,
+} from './Auth.styled';
 import Button from '../../components/UI/Button/Button';
 
 const Login = () => {
@@ -36,21 +36,26 @@ const Login = () => {
   return (
     <Layout>
       <Breadcrumbs title='Login' items={breadcrumbsLinks} />
-      <LoginContainer>
-        <LoginContent
+      <AuthContainer>
+        <AuthContent
           container
           direction='row'
           justify='center'
           alignItems='flex-start'
         >
-          <Box clone px={3}>
+          <Box
+            clone
+            px={{
+              md: 3,
+            }}
+          >
             <Grid item xs={12} sm={8} md={6} lg={5}>
               <Box mb={3}>
                 <Typography className='title' variant='h6' color='primary'>
                   Login
                 </Typography>
               </Box>
-              <LoginCard>
+              <AuthCard>
                 <CardContent>
                   <FormBox>
                     <FormInputLabel>E-mail</FormInputLabel>
@@ -73,7 +78,7 @@ const Login = () => {
                       <MuiLink
                         style={{ marginLeft: '.5rem' }}
                         component={Link}
-                        to='/auth/register'
+                        to='/auth/signup'
                       >
                         Sign up!
                       </MuiLink>
@@ -84,17 +89,17 @@ const Login = () => {
                         marginTop: '.4rem',
                       }}
                     >
-                      <MuiLink component={Link} to='/auth/register'>
+                      <MuiLink component={Link} to='/auth/forgot-password'>
                         Forgot your password?
                       </MuiLink>
                     </Typography>
                   </FormBox>
                 </CardContent>
-              </LoginCard>
+              </AuthCard>
             </Grid>
           </Box>
-        </LoginContent>
-      </LoginContainer>
+        </AuthContent>
+      </AuthContainer>
     </Layout>
   );
 };
