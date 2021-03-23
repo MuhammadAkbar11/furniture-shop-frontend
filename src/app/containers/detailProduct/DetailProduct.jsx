@@ -11,6 +11,8 @@ import {
 import Breadcrumbs from '@components/UI/Breadcrumbs/Breadcrumbs';
 import Button from '@components/UI/Button/Button';
 import { Link } from 'react-router-dom';
+import CounterQty from '@components/UI/CounterQty/CounterQty';
+import Recommendations from '@components/recommed/Recommendations';
 import {
   DetailProductContainer,
   GridContainerProduct,
@@ -18,7 +20,6 @@ import {
   ProductImageBox,
   ProductInfoBox,
 } from './DetailProduct.styled';
-import CounterQty from '../../components/UI/CounterQty/CounterQty';
 
 const DetailProduct = () => {
   const breadcrumbsLinks = [
@@ -114,6 +115,7 @@ const DetailProduct = () => {
           </GridItem>
         </GridContainerProduct>
       </DetailProductContainer>
+      <Recommendations />
     </Layout>
   );
 };
