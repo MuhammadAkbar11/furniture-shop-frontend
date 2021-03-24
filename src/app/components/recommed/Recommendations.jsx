@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Box, Button, Grid, Hidden, Typography } from '@material-ui/core';
 import imageProduct from 'assets/img/products/2.png';
-import { CartIcon } from '@components/UI/Icons';
+import { CartIcon, QuickViewIcon } from '@components/UI/Icons';
 import {
   RecomendationsContainer,
   RecommendationsTitle,
@@ -41,7 +41,7 @@ const Recommendations = () => {
                 <CartIcon />
               </Button>
               <Button className='btn-xs-action'>
-                <CartIcon />
+                <QuickViewIcon />
               </Button>
             </ProductCardActionMobile>
           </Hidden>
@@ -63,7 +63,7 @@ const Recommendations = () => {
                 <CartIcon />
               </ButtonAction>
               <ButtonAction>
-                <CartIcon />
+                <QuickViewIcon />
               </ButtonAction>
             </ProductCardAction>
           </Hidden>
