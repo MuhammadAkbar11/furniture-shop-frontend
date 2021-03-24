@@ -1,4 +1,12 @@
-import { Box, Card, CardContent, CardMedia, Grid } from '@material-ui/core';
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  withStyles,
+} from '@material-ui/core';
 import styled from 'styled-components';
 
 export const RecomendationsContainer = styled(Box)`
@@ -41,6 +49,7 @@ export const RecommProductCol = styled(Grid)`
 `;
 
 export const ProductCard = styled(Card)`
+  position: relative;
   background-color: transparent;
   overflow: hidden;
   border: none;
@@ -55,6 +64,12 @@ export const ProductCard = styled(Card)`
       height: 300px;
     }
   `}
+  &:hover {
+    .card-actions {
+      bottom: 30%;
+      opacity: 1;
+    }
+  }
 `;
 export const ProductCardMedia = styled(CardMedia)`
   background-size: 110%;
@@ -68,7 +83,7 @@ export const ProductCardMedia = styled(CardMedia)`
 
     ${({ theme }) => `
     ${theme.breakpoints.only('xs')} {
-      height: 200px;
+      height: 170px;
     }
   `}
   }
@@ -105,6 +120,7 @@ export const ProductCardContent = styled(CardContent)`
 
   ${({ theme }) => `
     ${theme.breakpoints.only('xs')} {
+      padding-top: .5rem;
       .price {
         font-size: 12px;
       }
@@ -115,3 +131,62 @@ export const ProductCardContent = styled(CardContent)`
     }
   `}
 `;
+
+export const ProductCardActionMobile = styled(Box)`
+  height: 30px;
+  display: flex;
+  border-top: 0.5px solid ${({ theme }) => theme.palette.grey[300]};
+  border-right: 0.5px solid ${({ theme }) => theme.palette.grey[300]};
+  border-bottom: 0.5px solid ${({ theme }) => theme.palette.grey[300]};
+  border-radius: 0;
+  box-sizing: border-box;
+  position: relative;
+
+  .btn-xs-action {
+    padding: 0.3rem 0rem;
+    height: 30px;
+    border-radius: 0;
+    border-left: 0.5px solid ${({ theme }) => theme.palette.grey[300]};
+    svg {
+      color: ${({ theme }) => theme.palette.grey[400]};
+      height: 20px !important;
+    }
+  }
+`;
+
+export const ProductCardAction = styled(Box)`
+  transition: 0.2s all ease-in-out;
+  position: absolute;
+  width: max-content;
+  opacity: 0;
+  left: 35%;
+  z-index: 5;
+  bottom: 28%;
+  display: flex;
+  gap: 0.7rem;
+`;
+
+export const ButtonAction = withStyles(theme => ({
+  root: {
+    backgroundColor: theme.palette.dark,
+    color: theme.palette.grey[200],
+    padding: theme.spacing(1),
+    height: 40,
+    width: 40,
+    maxWidth: 40,
+    minWidth: 40,
+    borderRadius: 2,
+    marginLeft: 0,
+    marginRight: 0,
+    '& svg': {
+      height: 40,
+      width: 40,
+      marginLeft: 0,
+    },
+
+    '&:hover': {
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.common.white,
+    },
+  },
+}))(Button);

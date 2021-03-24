@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Hidden, Typography } from '@material-ui/core';
 import imageProduct from 'assets/img/products/2.png';
+import { CartIcon } from '@components/UI/Icons';
 import {
   RecomendationsContainer,
   RecommendationsTitle,
@@ -10,6 +11,9 @@ import {
   ProductCard,
   ProductCardContent,
   ProductCardMedia,
+  ProductCardAction,
+  ButtonAction,
+  ProductCardActionMobile,
 } from './Recommendations.styled';
 
 const Recommendations = () => {
@@ -31,6 +35,16 @@ const Recommendations = () => {
               <ProductCardMedia image={imageProduct} />
             </Link>
           </Box>
+          <Hidden smUp>
+            <ProductCardActionMobile>
+              <Button className='btn-xs-action'>
+                <CartIcon />
+              </Button>
+              <Button className='btn-xs-action'>
+                <CartIcon />
+              </Button>
+            </ProductCardActionMobile>
+          </Hidden>
           <ProductCardContent className='card-content'>
             <Box>
               <Link to='/detail'>
@@ -43,6 +57,16 @@ const Recommendations = () => {
               </Typography>
             </Box>
           </ProductCardContent>
+          <Hidden smDown>
+            <ProductCardAction className='card-actions'>
+              <ButtonAction>
+                <CartIcon />
+              </ButtonAction>
+              <ButtonAction>
+                <CartIcon />
+              </ButtonAction>
+            </ProductCardAction>
+          </Hidden>
         </ProductCard>
       </RecommProductCol>
     );
