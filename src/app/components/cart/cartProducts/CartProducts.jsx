@@ -35,7 +35,7 @@ const CartProducts = () => {
   return (
     <CartProductsContainer>
       <CartProductsGridContainer container spacing={6}>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} md={8}>
           <CartTableBox>
             <Table>
               <TableHead>
@@ -71,7 +71,7 @@ const CartProducts = () => {
           </CartTableBox>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} md={4}>
           <CartDetailCard>
             <CardContent>
               <Typography className='card-title'>Cart Detail</Typography>

@@ -73,5 +73,9 @@ export const CartDetailCard = styled(Card)`
       color: ${theme.palette.dark};
 
     }
+
+    ${theme.breakpoints.only('sm')} {
+      width: 60%;
+    }
   `}
 `;
