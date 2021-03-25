@@ -1,18 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const CartIconStyled = styled.svg`
+  height: 100%;
+  width: 100%;
+`;
 
 const CartIcon = () => {
   return (
-    <svg
-      style={{
-        display: 'block',
-        height: '100%',
-        width: '100%',
-      }}
-      viewBox='0 0 24 24'
-      xmlns='http://www.w3.org/2000/svg'
-    >
+    <CartIconStyled viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
       <g>
-        <g id='Vrstva_536' data-name='Vrstva 536'>
+        <g>
           <polyline
             style={{
               fill: 'none',
@@ -59,7 +57,7 @@ const CartIcon = () => {
           />
         </g>
       </g>
-    </svg>
+    </CartIconStyled>
   );
 };
 
