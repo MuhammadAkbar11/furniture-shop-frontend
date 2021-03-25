@@ -23,7 +23,7 @@ const TopMenu = () => {
       <Hidden smUp>
         <BoxTopMenuMobile>
           <LogoTitle>FUDU</LogoTitle>
-          <Box width={40} height={40}>
+          <Box width={30} height={30}>
             <MuiLink
               style={{
                 textDecoration: 'none',

@@ -8,9 +8,11 @@ import {
 } from '@material-ui/core/styles';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
+import { Hidden } from '@material-ui/core';
 import TopMenu from './TopMenu/TopMenu';
 import { Wrapper } from './LayoutStyled';
 import Footer from './Footer/Footer';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 const defaultProps = {
   children: null,
@@ -62,6 +64,9 @@ const Layout = props => {
         <Wrapper>
           <TopMenu />
           {children}
+          <Hidden smUp>
+            <MobileMenu />
+          </Hidden>
           <Footer />
         </Wrapper>
       </ThemeProvider>
