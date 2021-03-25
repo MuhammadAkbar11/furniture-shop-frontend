@@ -57,11 +57,12 @@ const Sidebar = props => {
         <List>
           {menuItems.map(item => (
             <ListAction
+              key={item.id}
               component={Link}
               to={item.url}
               style={{ textDecoration: 'none' }}
             >
-              <ListItem button key={item.id} className={classes.listItem}>
+              <ListItem button className={classes.listItem}>
                 <ListItemIcon className={classes.listItemIcon}>
                   {item.icon}
                 </ListItemIcon>
