@@ -6,3 +6,5 @@ export { default as QuickViewIcon } from './QuickViewIcon';
 export { default as HomeIcon } from './HomeIcon';
 export { default as ExploreIcon } from './ExploreIcon';
 export { default as MoreIcon } from './MoreIcon';
+export { default as DashboardIcon } from './DashboardIcon';
+export { default as MenuIcon } from './MenuIcon';
