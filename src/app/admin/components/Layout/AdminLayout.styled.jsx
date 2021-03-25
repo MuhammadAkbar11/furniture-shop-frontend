@@ -48,11 +48,13 @@ const useStyles = makeStyles(theme => ({
     },
   },
   content: {
+    width: '100%',
+    overflowX: 'hidden',
     flexGrow: 1,
+    position: 'relative',
     minHeight: '100vh',
     padding: theme.spacing(3),
     paddingTop: theme.spacing(4),
-    // border: '1px solid',
     backgroundColor: theme.palette.grey[100],
   },
   drawerPaper: {
