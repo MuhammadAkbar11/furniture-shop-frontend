@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataGrid, GridRowsProp, GridColDef } from '@material-ui/data-grid';
+import { DataGrid } from '@material-ui/data-grid';
 import image from '../../../../assets/img/products/1.png';
 /* eslint-disable */
 

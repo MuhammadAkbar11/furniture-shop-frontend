@@ -3,13 +3,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-import {
-  Redirect,
-  Route,
-  Switch,
-  useHistory,
-  useRouteMatch,
-} from 'react-router-dom';
+import { Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
 import AdminLayout from '../../components/Layout/AdminLayout';
 import useStyles from './Products.styled';
 import AllProduct from '../../components/Products/AllProduct';
@@ -56,7 +51,7 @@ const Products = () => {
             className={classes.tabs}
           >
             <Tab
-              onClick={() => handleGo('all')}
+              onClick={() => handleGo('')}
               label='All Products'
               {...a11yProps(0)}
             />
@@ -78,15 +73,9 @@ const Products = () => {
             {/* <Tab label='Item Seven' {...a11yProps(6)} /> */}
           </Tabs>
         </AppBar>
+
         <Switch>
-          <Route
-            exact
-            path={`${match.path}`}
-            render={() => {
-              return <Redirect to={`${match.path}/all`} />;
-            }}
-          />
-          <Route exact path={`/admin/products/all`} component={AllProduct} />
+          <Route exact path={`${match.path}`} component={AllProduct} />
 
           <Route
             path={`${match.path}/chairs`}
